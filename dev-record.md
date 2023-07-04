@@ -22,6 +22,12 @@ pnpm install -D eslint-plugin-prettier prettier eslint-config-prettier
 5. 安装husky 规范代码提交
 pnpm i -D husky
 npx husky-init
-6. 限制包管理器
+
+如果是mac电脑，需要给pre-commit加上执行权限  chmod +x pre-comit
+
+6. 配置commotlint
+
+pnpm add @commitlint/config-conventional @commitlint/cli -D
+npx husky add .husky/commit-msg
 
 ```
