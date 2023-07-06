@@ -5,8 +5,8 @@ import App from './App.vue'
 //@ts-ignore
 import zhCn from 'element-plus/dist/locale/zh-cn.mjs'
 //引入element-plus插件与样式
-import ElementPlus from "element-plus"
-import "element-plus/dist/index.css"
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
 
 //获取应用实例对象
 const app = createApp(App)

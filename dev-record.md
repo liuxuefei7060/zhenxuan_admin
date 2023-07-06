@@ -30,7 +30,7 @@ npx husky-init
 pnpm add @commitlint/config-conventional @commitlint/cli -D
 npx husky add .husky/commit-msg
 
-7. 安装element-plus  
+7. 安装element-plus
  pnpm i element-plus
  pnpm i @element-plus/icons-vue
 

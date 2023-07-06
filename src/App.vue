@@ -3,13 +3,14 @@
     <h1>我是根硕</h1>
     <div>
       <el-button type="primary" :icon="Plus">主要模式</el-button>
-
+      <Test></Test>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import {Plus} from "@element-plus/icons-vue"
+import { Plus } from '@element-plus/icons-vue'
+import Test from '@/components/Test.vue'
 // const str = '我爱你祖国'
 </script>
 
@@ -17,7 +18,7 @@ import {Plus} from "@element-plus/icons-vue"
 .box {
   width: 400px;
   height: 400px;
-  // background: black;
+  background: black;
   h1 {
     color: white;
   }
