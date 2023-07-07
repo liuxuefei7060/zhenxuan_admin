@@ -12,5 +12,6 @@ import 'element-plus/dist/index.css'
 const app = createApp(App)
 //安装element-plus插件
 app.use(ElementPlus, { locale: zhCn })
+console.log(import.meta.env)
 //将应用挂在到挂载点上
 app.mount('#app')
