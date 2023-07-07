@@ -34,4 +34,7 @@ npx husky add .husky/commit-msg
  pnpm i element-plus
  pnpm i @element-plus/icons-vue
 
+ 8. 引入SVG图标
+ pnpm install vite-plugin-svg-icons -D
+ 在vite.config.ts文件配置一下
 ```
