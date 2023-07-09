@@ -1,7 +1,7 @@
 <template>
   <div class="root">
     <h1>123131Test</h1>
-    <Svgicon name="vue"></Svgicon>
+    <Svgicon name="settings" width="100px" height="100px" color="red"></Svgicon>
   </div>
 </template>
 
