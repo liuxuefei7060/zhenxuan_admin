@@ -5,9 +5,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
-import Svgicon from '@/components/Svgicon/index.vue'
-</script>
+<script setup lang="ts"></script>
 
 <style scoped>
 .root {

@@ -16,5 +16,10 @@ console.log(import.meta.env)
 //将应用挂在到挂载点上
 //svg插件需要配置代码
 import 'virtual:svg-icons-register'
+//注册全局
+// import Svgicon from '@/components/Svgicon/index.vue'
+import allComponent from '@/components'
+app.use(allComponent)
+// app.component('Svgicon', Svgicon)
 
 app.mount('#app')
