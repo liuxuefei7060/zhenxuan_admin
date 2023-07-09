@@ -1,7 +1,7 @@
 
 <template>
-    <svg>
-        <use :xlink:href="'#icon-' + name" :fill="color" :width="width" :height="height"></use>
+    <svg :style="{width, height}">
+        <use :xlink:href="'#icon-' + name" :fill="color"></use>
     </svg>
 </template>
   
