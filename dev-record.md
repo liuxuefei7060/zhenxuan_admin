@@ -40,4 +40,8 @@ npx husky add .husky/commit-msg
 
  9. mock数据
  pnpm install vite-plugin-mock mockjs
+
+ 10. 安装axios
+
+ pnpm install axios
 ```

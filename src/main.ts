@@ -24,4 +24,15 @@ import allComponent from '@/components'
 app.use(allComponent)
 // app.component('Svgicon', Svgicon)
 
+// import axios from 'axios'
+
+// axios({
+//     url:'/api/user/login',
+//     method:'post',
+//     data:{
+//         username:'admin',
+//         password:'111111'
+//     }
+// })
+
 app.mount('#app')
