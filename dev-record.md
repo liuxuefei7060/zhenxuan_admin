@@ -37,4 +37,7 @@ npx husky add .husky/commit-msg
  8. 引入SVG图标
  pnpm install vite-plugin-svg-icons -D
  在vite.config.ts文件配置一下
+
+ 9. mock数据
+ pnpm install vite-plugin-mock mockjs
 ```
