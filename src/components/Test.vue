@@ -7,8 +7,6 @@
 
 <script setup lang="ts">
 import Svgicon from '@/components/Svgicon/index.vue'
-
-
 </script>
 
 <style scoped>
