@@ -1,5 +1,6 @@
+import type { RouteRecordRaw } from 'vue-router'
 // 常量路由
-export const constantRouter = [
+export const constantRouter: RouteRecordRaw[] = [
   {
     //登录
     path: '/login',
@@ -19,10 +20,8 @@ export const constantRouter = [
     name: '404',
   },
   {
-    //
     path: '/:pathMatch(.*)*',
-    component: () => import('@/views/404/index.vue'),
     redirect: '/404',
-    name: 'any',
+    name: 'Any',
   },
 ]

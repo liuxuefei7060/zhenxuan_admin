@@ -5,8 +5,10 @@
     "module": "ESNext",
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "skipLibCheck": true,
-    /* Bundler mode */
-    "moduleResolution": "bundler",
+    /* Bundler mode 在ts为5版本时候，需要从bundler改为node
+       typescript 5.0版本升级，使用了 compilerOptions.moduleResolution: "bundler" 的模块编译选项。
+    */
+    "moduleResolution": "node",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
