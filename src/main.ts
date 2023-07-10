@@ -10,6 +10,8 @@ import 'element-plus/dist/index.css'
 
 // 引入全局样式
 import '@/style/index.scss'
+import router from './router'
+
 //获取应用实例对象
 const app = createApp(App)
 //安装element-plus插件
@@ -34,5 +36,7 @@ app.use(allComponent)
 //         password:'111111'
 //     }
 // })
+//注册路由
+app.use(router)
 
 app.mount('#app')

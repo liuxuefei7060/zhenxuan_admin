@@ -45,4 +45,7 @@ npx husky add .husky/commit-msg
 
  pnpm install axios
  11. 二次封装axios
+
+ 12. 安装vue-router并且配置
+
 ```
