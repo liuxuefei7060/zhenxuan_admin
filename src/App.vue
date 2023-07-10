@@ -13,6 +13,18 @@
 // import { Plus } from '@element-plus/icons-vue'
 // import Test from '@/components/Test.vue'
 // const str = '我爱你祖国'
+import { onMounted } from 'vue'
+import request from '@/utils/request'
+onMounted(() => {
+  request({
+    url: 'user/login',
+    method: 'post',
+    data: {
+      username: 'admin',
+      password: '111111',
+    },
+  })
+})
 </script>
 
 <style scoped lang="scss">
