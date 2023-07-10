@@ -48,4 +48,6 @@ npx husky add .husky/commit-msg
 
  12. 安装vue-router并且配置
 
+ 13. 安装pinia
+ pnpm install pinia
 ```

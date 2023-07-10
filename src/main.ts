@@ -11,7 +11,7 @@ import 'element-plus/dist/index.css'
 // 引入全局样式
 import '@/style/index.scss'
 import router from './router'
-
+import pinia from '@/store/index'
 //获取应用实例对象
 const app = createApp(App)
 //安装element-plus插件
@@ -38,5 +38,7 @@ app.use(allComponent)
 // })
 //注册路由
 app.use(router)
+//引入仓库
+app.use(pinia)
 
 app.mount('#app')
