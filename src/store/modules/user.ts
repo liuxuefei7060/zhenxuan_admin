@@ -1,9 +1,10 @@
 import { defineStore } from 'pinia'
 import type { LoginForm } from '@/api/user/type'
 import { reqLogin } from '@/api/user'
+import { UserState } from './type'
 
 let useUserStore = defineStore('User', {
-  state: () => {
+  state: (): UserState => {
     return {
       token: localStorage.getItem('TOKEN'), //用户的唯一标识
     }
