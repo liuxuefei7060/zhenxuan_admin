@@ -3,10 +3,15 @@
     <el-row>
       <el-col :span="12" :xs="0"></el-col>
       <el-col :span="12" :xs="24">
-        <el-form class="login_form">
+        <el-form
+          class="login_form"
+          :model="loginForm"
+          :rules="rules"
+          ref="loginForms"
+        >
           <h1>Hello</h1>
           <h2>换来来到硅谷甄选</h2>
-          <el-form-item>
+          <el-form-item prop="username">
             <el-input
               :prefix-icon="User"
               v-model="loginForm.username"
@@ -20,7 +25,7 @@
               show-password
             ></el-input>
           </el-form-item>
-          <el-form-item>
+          <el-form-item prop="password">
             <el-button
               :loading="loading"
               class="login_btn"
@@ -50,9 +55,45 @@ let $router = useRouter()
 // 收集账号与密码的数据
 let loginForm = reactive({ username: 'admin', password: '111111' })
 let loading = ref(false)
+//获取el-form实例
+let loginForms = ref()
 let userStore = useUserStore()
 
+const validateUsername = (rule: any, value: string, callback: any) => {
+  // console.log(rule, value, callback)
+  if (value.length > 0) {
+    callback()
+  } else {
+    callback(new Error('用户名不能为空'))
+  }
+}
+
+//定义表单需要的规则对象
+let rules = {
+  // required 代表一定要校验的
+  // min
+  // max
+  // message 提示信息
+  // trigger 出发时机  blur  失去焦点   change 内容改变
+  username: [
+    // { required: true, message: '用户名不能为空', trigger: 'blur' },
+    { trigger: 'change', validator: validateUsername },
+  ],
+  password: [
+    {
+      required: true,
+      min: 6,
+      max: 10,
+      message: '密码的长度至少6位',
+      trigger: 'change',
+    },
+  ],
+}
+
 const login = async () => {
+  //保证全部表单项校验通过再发送请求
+  await loginForms.value.validate()
+
   // console.log("login")
   loading.value = true
   try {
